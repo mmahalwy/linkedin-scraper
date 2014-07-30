@@ -7,6 +7,8 @@ Linkedin Scraper
 Linkedin-scraper is a gem for scraping linkedin public profiles.
 Given the URL of the profile, it gets the name, country, title, area, current companies, past comapnies,organizations, skills, groups, etc
 
+This is a fork of the [linked-scraper gem](https://github.com/yatish27/linkedin-scraper) that allows for proxy
+
 
 ##Installation
 
@@ -20,7 +22,7 @@ This gem is tested on 1.9.2, 1.9.3, 2.0.0, JRuby1.9, rbx1.9,
 ##Usage
 
 
-Initialize a scraper instance, must include proxy
+Initialize a scraper instance, can include proxy as such.
 
      if Rails.env.production?
         profile =  Linkedin::Profile.get_profile(url, proxy_ip: proxy_ip, proxy_port: "8080")
