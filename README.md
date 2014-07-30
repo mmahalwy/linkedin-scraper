@@ -22,7 +22,11 @@ This gem is tested on 1.9.2, 1.9.3, 2.0.0, JRuby1.9, rbx1.9,
 
 Initialize a scraper instance, must include proxy
 
-    profile = Linkedin::Profile.get_profile("http://www.linkedin.com/in/jeffweiner08", "proxy_ip", "proxy_port")
+     if Rails.env.production?
+        profile =  Linkedin::Profile.get_profile(url, proxy_ip: proxy_ip, proxy_port: "8080")
+     else
+         profile = Linkedin::Profile.get_profile( url)
+     end
 
 
 
